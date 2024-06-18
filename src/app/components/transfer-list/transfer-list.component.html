@@ -1,0 +1,23 @@
+<table>
+    <thead>
+      <tr>
+        <th>Source Account</th>
+        <th>Destination Account</th>
+        <th>Amount</th>
+        <th>Fee</th>
+        <th>Transfer Date</th>
+        <th>Schedule Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transfer of transfers">
+        <td>{{ transfer.sourceAccount }}</td>
+        <td>{{ transfer.destinationAccount }}</td>
+        <td>{{ transfer.amount | currency }}</td>
+        <td>{{ transfer.fee | currency }}</td>
+        <td>{{ transfer.transferDate }}</td>
+        <td>{{ transfer.scheduleDate }}</td>
+      </tr>
+    </tbody>
+</table>
+  

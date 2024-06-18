@@ -1,0 +1,11 @@
+<form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
+    <label for="sourceAccount">Source Account:</label>
+    <input id="sourceAccount" formControlName="sourceAccount">
+    <label for="destinationAccount">Destination Account:</label>
+    <input id="destinationAccount" formControlName="destinationAccount">
+    <label for="amount">Amount:</label>
+    <input id="amount" formControlName="amount" type="number" step="0.01">
+    <label for="transferDate">Transfer Date:</label>
+    <input id="transferDate" formControlName="transferDate" type="date">
+    <button type="submit" [disabled]="transferForm.invalid">Schedule Transfer</button>
+</form>
